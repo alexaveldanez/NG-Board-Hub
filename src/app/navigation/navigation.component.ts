@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
+import { AngularFireAuth } from '@angular/fire/auth';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navigation',
@@ -9,6 +11,7 @@ import { map, shareReplay } from 'rxjs/operators';
   styleUrls: ['./navigation.component.scss']
 })
 export class NavigationComponent implements OnInit {
+  isAuth = false;
 
   isHandset$: Observable<boolean> = this.breakpointObserver.observe([Breakpoints.Handset])
   .pipe(
@@ -16,9 +19,18 @@ export class NavigationComponent implements OnInit {
     shareReplay()
   );
 
-  constructor(private breakpointObserver: BreakpointObserver) { }
+  constructor(
+    private breakpointObserver: BreakpointObserver,
+    private router: Router,
+    public afAuth: AngularFireAuth,
+    ) { }
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+
+  onLogout() {
+    this.afAuth.signOut();
+    this.router.navigate(['/login']);
+    this.isAuth = false;
   }
 
 }

@@ -1,1 +1,25 @@
-<p>board works!</p>
+<mat-card class="outer-card">
+  <mat-card-header>
+    <ng-content></ng-content>
+    <mat-card-title>
+      Board Title
+    </mat-card-title>
+  </mat-card-header>
+
+  <div
+  class="tasks"
+  cdkDropList
+  cdkDropListOrientation="vertical"
+  >
+  </div>
+  <div
+  class="inner-card"
+  cdkDrag>
+  <mat-card>Task Description</mat-card>
+  </div>
+
+  <button mat-stroked-button>
+    <mat-icon>add</mat-icon>
+  </button>
+
+</mat-card>

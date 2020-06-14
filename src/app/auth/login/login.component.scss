@@ -1,0 +1,39 @@
+:host {
+  text-align: center;
+}
+
+mat-card {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+  mat-form-field {
+    width: 500px;
+    margin-bottom: 16px;
+  }
+
+  button {
+    img {
+        width: 1.25em;
+    }
+  }
+
+  h4 {
+    padding-top: 10px;
+  }
+
+  .server-error {
+    margin: 8px 0;;
+  }
+
+  input {
+    height: 2em;
+    div.mat-form-field-infix {
+      padding: .3em 0;
+      input.mat-input-element {
+        vertical-align: top;
+      }
+    }
+  }

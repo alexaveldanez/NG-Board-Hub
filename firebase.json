@@ -1,0 +1,19 @@
+{
+  "hosting": [
+    {
+      "target": "ng-board-hub",
+      "public": "dist/ng-board-hub",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    }
+  ]
+}

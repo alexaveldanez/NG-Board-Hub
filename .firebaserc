@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "board-hub-c6adf": {
+      "hosting": {
+        "ng-board-hub": [
+          "board-hub-c6adf"
+        ]
+      }
+    }
+  }
+}

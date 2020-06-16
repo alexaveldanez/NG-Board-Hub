@@ -10,20 +10,18 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { MaterialModule } from './shared/material.module';
-import { BoardComponent } from './boards/board/board.component';
-import { BoardListComponent } from './boards/board-list/board-list.component';
 import { LoginComponent } from './auth/login/login.component';
 import { SignupComponent } from './auth/signup/signup.component';
-import { environment } from '../environments/environment';
 import { GoogleSigninDirective } from './auth/google-signin.directive';
+import { BoardsModule } from './boards/boards.module';
+
+import { environment } from '../environments/environment';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     NavigationComponent,
-    BoardComponent,
-    BoardListComponent,
     LoginComponent,
     SignupComponent,
     GoogleSigninDirective
@@ -36,7 +34,8 @@ import { GoogleSigninDirective } from './auth/google-signin.directive';
     MaterialModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    BoardsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

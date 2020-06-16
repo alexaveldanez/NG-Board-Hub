@@ -6,19 +6,27 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 
 import { MaterialModule } from '../shared/material.module';
+import { BoardListComponent } from './board-list/board-list.component';
+import { BoardComponent } from './board/board.component';
+import { BoardDialogComponent } from './dialogs/board-dialog/board-dialog.component';
+import { TaskDialogComponent } from './dialogs/task-dialog/task-dialog.component';
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    BoardListComponent,
+    BoardComponent,
+    BoardDialogComponent,
+    TaskDialogComponent
+  ],
   imports: [
     CommonModule,
     MaterialModule,
     FormsModule,
     DragDropModule,
     MatDialogModule,
-    MatDialogModule,
     MatButtonToggleModule
   ],
-  entryComponents: []
+  entryComponents: [BoardDialogComponent, TaskDialogComponent]
 })
 export class BoardsModule {}

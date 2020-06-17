@@ -4,7 +4,12 @@
   class="boards"
   (cdkDropListDropped)="drop($event)"
   >
-  <app-board cdkDrag cdkDragHandle *ngFor="let board of boards" [board]="board">
+  <app-board
+  class="app-board"
+  cdkDrag
+  cdkDragHandle
+  *ngFor="let board of boards"
+  [board]="board">
   </app-board>
 
   <div class="board-button">

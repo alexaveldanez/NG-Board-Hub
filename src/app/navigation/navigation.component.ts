@@ -25,7 +25,13 @@ export class NavigationComponent implements OnInit {
     public afAuth: AngularFireAuth,
     ) { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.afAuth.onAuthStateChanged(user => {
+      if (user) {
+        this.isAuth = true;
+      }
+    });
+  }
 
   onLogout() {
     this.afAuth.signOut();

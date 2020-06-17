@@ -12,8 +12,8 @@ body {
 
 @include mat-core();
 
-$ng-board-hub-primary: mat-palette($mat-indigo);
-$ng-board-hub-accent: mat-palette($mat-green, A200, A100, A400);
+$ng-board-hub-primary: mat-palette($mat-green);
+$ng-board-hub-accent: mat-palette($mat-amber, A200, A100, A400);
 
 $ng-board-hub-warn: mat-palette($mat-red);
 

@@ -10,6 +10,7 @@ import { BoardListComponent } from './board-list/board-list.component';
 import { BoardComponent } from './board/board.component';
 import { BoardDialogComponent } from './dialogs/board-dialog/board-dialog.component';
 import { TaskDialogComponent } from './dialogs/task-dialog/task-dialog.component';
+import { BoardRoutingModule } from './board-routing.module';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { TaskDialogComponent } from './dialogs/task-dialog/task-dialog.component
     FormsModule,
     DragDropModule,
     MatDialogModule,
-    MatButtonToggleModule
+    MatButtonToggleModule,
+    BoardRoutingModule
   ],
   entryComponents: [BoardDialogComponent, TaskDialogComponent]
 })
